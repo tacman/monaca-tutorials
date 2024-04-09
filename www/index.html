@@ -24,6 +24,10 @@
       document.querySelector('#navigator').bringPageTop(page, { animation: 'fade' });
     };
 
+    const clearLocalStorage = () => {
+      localStorage.clear();
+      ons.notification.alert('Cleared local storage');
+    };
 
   </script>
 
@@ -36,6 +40,9 @@
       <ons-list>
         <ons-list-item onclick="loadPage('about.html')">About</ons-list-item>
         <ons-list-item onclick="loadPage('login.html')">Login</ons-list-item>
+        <ons-list-item onclick="clearLocalStorage()">
+          Clear local storage
+        </ons-list-item>
       </ons-list>
     </ons-page>
   </ons-splitter-side>
